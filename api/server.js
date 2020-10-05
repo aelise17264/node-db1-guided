@@ -8,8 +8,9 @@ server.use(express.json());
 
 server.use("/api/posts", PostRouter);
 
+//sanity check endpoint to make sure our server can run & can answer requests
 server.get("/", (req, res) => {
-  res.status(200).json({ api: "up" });
+  res.status(200).json({ api: "up and running" });
 });
 
 module.exports = server;
